@@ -1,41 +1,23 @@
 {
-  "name": "vue-dev-kit",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "uma-factor-calculator",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "build": "pnpm -r build",
-    "dev": "pnpm -r dev",
-    "release": "pnpm changeset version && pnpm build && pnpm publish -r",
-    "prepare": "husky install",
-    "changeset": "changeset",
-    "changeset-add": "changeset add",
-    "changeset-version": "changeset version",
-    "changeset-publish": "changeset publish",
-    "commitlint": "commitlint --from=HEAD~1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "@google/genai": "^1.40.0"
+  },
   "devDependencies": {
-    "@changesets/cli": "catalog:",
-    "@commitlint/cli": "catalog:",
-    "@commitlint/config-conventional": "catalog:",
-    "commitizen": "catalog:",
-    "cz-conventional-changelog": "catalog:",
-    "husky": "catalog:",
-    "typescript": "catalog:",
-    "unbuild": "catalog:"
-  },
-  "engines": {
-    "node": ">=20.10.0",
-    "pnpm": ">=9.12.0"
-  },
-  "packageManager": "pnpm@10.25.0",
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
   }
 }
